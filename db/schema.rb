@@ -12,9 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20170109021919) do
 
-  create_table "items", force: :cascade do |t|
-    t.string   "name"
-    t.string   "color"
+  create_table "questions", force: :cascade do |t|
+    t.string   "question"
+    t.string   "answer"
+    t.integer  "clue_id"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5,6 +5,9 @@ gem "sinatra"
 gem "activerecord"
 gem "sinatra-activerecord"
 gem "rake"
+gem "httparty"
+gem "json"
+gem "japi"
 
 group :development do
   gem "pry"

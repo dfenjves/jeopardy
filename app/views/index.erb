@@ -1,17 +1,10 @@
-<h1> Items </h1>
+<h1> Jeopardy </h1>
+<h2> Category: <%= @category %></h2>
+<%= @id %>
+<h2> <%= @question %> </h2>
 
-<form method="post" action="/new">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-  <label for="color">Color</label>
-  <input type="text" id="color" name="color">
+<form method="post" action="/check-answer">
+  <input type="hidden" name="id" value="<%= @id %>">
+  <input type="text" name="response">
   <input type="submit">
 </form>
-
-<ul>
-  <% if @items %>
-    <% @items.each do |item| %>
-      <li><%= item.name %> - <%= item.color %>
-    <% end %>
-  <% end %>
-</ul>
